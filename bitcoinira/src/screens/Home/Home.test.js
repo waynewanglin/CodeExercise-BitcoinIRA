@@ -8,7 +8,7 @@ const fakeStore = {
   error: {},
   status: {},
   user: {
-    username: 'johndoe',
+    firstName: 'johndoe',
   },
 };
 
@@ -22,6 +22,6 @@ describe('Home', () => {
   it('should render a welcome message with the user name', () => {
     const { getByText } = render(withProviders(<Home />, { initialState: fakeStore }));
 
-    expect(getByText(`${strings.home.message} johndoe`)).toBeTruthy();
+    expect(getByText(`${strings.home.users}`)).toBeTruthy();
   });
 });

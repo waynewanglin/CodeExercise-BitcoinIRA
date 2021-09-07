@@ -1,23 +1,26 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { login, logout, TYPES } from '@/actions/UserActions';
+import { register, logout, TYPES } from '@/actions/UserActions';
 
 const user = {
-  username: 'username',
-  password: 'password',
+  firstName: 'Mobile Engineer',
+  lastName: 'bitcoin IRA',
+  email: 'engineer@bitcoinira.com',
+  city: 'Los Angeles',
+  country: 'USA',
+  dateOfBirth: '01/01/2000',
+  mobile: '800-245-8789',
 };
 
-const loginActions = [
+const registerActions = [
   {
-    type: TYPES.LOGIN_REQUEST,
+    type: TYPES.REGISTER_REQUEST,
     payload: null,
   },
   {
-    type: TYPES.LOGIN_SUCCESS,
+    type: TYPES.REGISTER_ERROR,
     payload: {
-      user: {
-        username: 'username',
-      },
+      error: 'Connection error',
     },
   },
 ];
@@ -38,10 +41,10 @@ describe('UserActions', () => {
     store = mockStore({});
   });
 
-  it('should create an action for login', async () => {
-    await store.dispatch(login(user.username, user.password));
+  it('should create an action for register', async () => {
+    await store.dispatch(register(user));
     const actions = store.getActions();
-    expect(actions).toEqual(loginActions);
+    expect(actions).toEqual(registerActions);
   });
 
   it('should create an action for logout', async () => {

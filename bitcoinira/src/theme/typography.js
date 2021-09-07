@@ -9,6 +9,11 @@ export const typography = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
   },
+  detail: {
+    fontSize: 14,
+    fontWeight: '400',
+    marginTop: 5,
+  },
   label: {
     fontSize: 16,
     fontWeight: '700',

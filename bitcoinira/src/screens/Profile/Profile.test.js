@@ -17,10 +17,8 @@ describe('Profile', () => {
   it('should render the title and logout button', async () => {
     const { getByText } = render(withProviders(<Profile />));
 
-    const profileTitle = getByText(strings.profile.message);
     const logoutButton = getByText(strings.profile.logout);
 
-    expect(profileTitle).toBeTruthy();
     expect(logoutButton).toBeTruthy();
   });
 

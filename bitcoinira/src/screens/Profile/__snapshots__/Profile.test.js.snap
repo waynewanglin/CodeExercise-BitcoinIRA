@@ -18,15 +18,14 @@ exports[`Profile should match the snapshot 1`] = `
           "fontWeight": "700",
         },
         Object {
-          "textAlign": "center",
-        },
-        Object {
           "color": "rgb(28, 28, 30)",
         },
       ]
     }
   >
-    This screen has the iOS native large header.
+    Welcome
+     
+     
   </Text>
   <View
     accessible={true}

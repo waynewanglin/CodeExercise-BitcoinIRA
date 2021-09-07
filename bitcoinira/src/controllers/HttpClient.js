@@ -7,6 +7,7 @@ const client = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
+  timeout: 10000,
 });
 
 client.interceptors.response.use(
@@ -30,4 +31,4 @@ const clearAuthorization = () => {
   delete client.defaults.headers.common.authorization;
 };
 
-export const HttpClient = { ...client, setAuthorization, clearAuthorization };
+export const HttpClient = { client, setAuthorization, clearAuthorization };

@@ -100,7 +100,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "RNTemplate Dev"
+      customArchiveName = "BitcoinIRA Dev"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

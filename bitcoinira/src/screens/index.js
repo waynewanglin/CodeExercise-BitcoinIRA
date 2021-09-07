@@ -1,3 +1,3 @@
 export { Home } from '@/screens/Home/Home';
-export { Login } from '@/screens/Login/Login';
+export { Register } from '@/screens/Register/Register';
 export { Profile } from '@/screens/Profile/Profile';
